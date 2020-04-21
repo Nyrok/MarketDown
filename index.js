@@ -353,7 +353,7 @@ bot.on('message', async message => {
                                 })
                                 await message.guild.channels.find("id", "697431477222244402").send(`Nouvelle mise à jour de commande <@${i}> !`)
                                 await message.guild.channels.find("id", "697431477222244402").send(cu).catch(console.error)
-                                db.get()
+                                db.get("commandes").pop({id: i}).write()
                             })
                         })
                     }
@@ -384,7 +384,7 @@ bot.on('message', async message => {
             .setTitle("**[:question:] PAGE D'AIDE**")
             .setDescription("**— — — — (`" + prefix + "help`) — — — —**")
             .addField("`Voici les commandes disponibles`\n**__ACHETEUR__**", "`" + prefix + "achat` : Enregistrer une commande.\n`" + prefix + "reset` : Annuler votre commande.\n`" + prefix + "infos` : Afficher les informations d'une commande.\n`" + prefix + "help` : Afficher cette page.")                
-            .addField("**__VENDEUR__**", "`" + prefix + "reset @Utilisateur` : Annuler la commande d'un utilisateur.\n`" + prefix + "commande` : Prendre en charge une commande.\n`" + prefix + "blacklist` : Mettre un utilisateur dans la blacklist.\n`" + prefix + "pardon` : Retirer un utilisateur de la blacklist.")                
+            .addField("**__VENDEUR__**", "`" + prefix + "reset @Utilisateur` : Annuler la commande d'un utilisateur.\n`" + prefix + "commande` : Prendre en charge une commande.\n`" + prefix + "blacklist` : Mettre un utilisateur dans la blacklist.\n`" + prefix + "admin-achat` : Faire une commande à la place d'un utilisateur.")                
             .setColor("RED")
             .setFooter("@Nyrok10 on Twitter", "https://cdn.discordapp.com/emojis/590848931852713984.png?v=1")
             .setTimestamp()
