@@ -1,12 +1,6 @@
 {
-  "commandes": [
-    {
-      "id": "660226031181103174",
-      "name": "PrettyMimiie",
-      "desc": "J'aime les chatons <:GWgoaSadness:405753091527409664>",
-      "prix": "0",
-      "msg": "701925392965173258"
-    }
-  ],
+  "commandes": [],
+  "encheres": [],
+  "surenchere": [],
   "blacklist": []
 }
